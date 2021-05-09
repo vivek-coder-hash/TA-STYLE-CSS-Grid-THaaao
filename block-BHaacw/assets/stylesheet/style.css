@@ -1,0 +1,267 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #3A4A4F;
+}
+
+body p {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+html {
+  font-size: 16px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1460px;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  gap: 3rem;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "navbar navbar navbar" "article1 main article3" "article4 main article5" "article4 main article6";
+  place-content: start center;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  padding: 1rem 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.article, .nav {
+  padding: 0.5rem;
+  background: white;
+}
+
+.article a {
+  color: red;
+  text-decoration: none;
+}
+
+.nav-bar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  place-items: center;
+}
+
+.nav-bar li {
+  list-style: none;
+}
+
+.nav-bar li a {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #4897BE;
+}
+
+.nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: navbar;
+}
+
+.article1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: article1;
+}
+
+.nav, .article {
+  border-top: 3px solid #4897BE;
+}
+
+.main {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  grid-area: main;
+}
+
+.main figure {
+  width: 25rem;
+  margin: 0 auto;
+  padding-top: 3rem;
+}
+
+.main figure img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.article3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: article3;
+  position: relative;
+  padding: 0;
+}
+
+.article3 .intro {
+  padding: 0.5rem;
+}
+
+.article3 a {
+  color: white;
+}
+
+.article4 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: article4;
+}
+
+.article4 figure {
+  width: 15rem;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.article4 figure img {
+  width: 100%;
+}
+
+.article5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: article5;
+  padding: 0;
+  position: relative;
+}
+
+.article5 .article5-intro {
+  padding: 0.5rem;
+}
+
+.article6 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: article6;
+}
+
+.red-ribbon {
+  background-color: red;
+  padding: 0.5rem;
+  color: white;
+}
+
+.blue-ribbon {
+  background-color: #4897BE;
+  padding: 0.5rem;
+  color: white;
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 12px;
+  }
+  .container {
+    width: 90%;
+        grid-template-areas: "navbar navbar navbar" "article1 article3 article3" "article4 article5 article5" "article4 article6 article6" "main . .";
+    place-content: center;
+  }
+  .main figure {
+    width: 30rem;
+  }
+  .main figure img {
+    width: 100%;
+  }
+  .article4 {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: article4;
+  }
+  .article4 figure {
+    width: 10rem;
+  }
+  .article4 figure img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 10px;
+  }
+  .container {
+        grid-template-areas: "navbar navbar navbar"  "article1 article1 article1" "article4 article4 article4" "main main main" "article3 article3 article3" "article5 article5 article5" "article6 article6 article6";
+    place-content: center;
+  }
+  .main figure {
+    width: 20rem;
+  }
+  .main figure img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 8px;
+  }
+  main {
+    padding-bottom: 1rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
