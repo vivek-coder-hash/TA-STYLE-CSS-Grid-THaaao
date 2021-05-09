@@ -1,0 +1,620 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.small-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1060px;
+  display: -ms-grid;
+  display: grid;
+  height: 2rem;
+  padding: 0.5rem 0;
+}
+
+.header-section {
+  padding: 2rem;
+  position: absolute;
+  width: 100%;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.justify-content-space-btw {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.justify-content-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav li a, .brand a {
+  text-decoration: none;
+  color: #71706F;
+}
+
+.brand a {
+  font-size: 1.5rem;
+  color: #333333;
+  font-weight: 700;
+  text-shadow: 2px 2px white;
+}
+
+.nav li a {
+  margin-left: 2rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #161616;
+}
+
+.orange {
+  color: #E3AE57 !important;
+  text-decoration: none;
+}
+
+.hero-section .container {
+      grid-template-areas: "figure figure hero-article hero-article";
+  grid-auto-rows: 100vh;
+}
+
+.hero-section .hero-figure {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: figure;
+  background-image: url(../media/home-img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-section .hero-figure img {
+  width: 100%;
+}
+
+.hero-section .hero-article {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: hero-article;
+  background-color: #F1E2D7;
+  padding: 18rem 2rem;
+}
+
+.hero-section .hero-article h2 {
+  font-size: 0.8rem;
+  padding: 1rem 0;
+  letter-spacing: 0.1rem;
+}
+
+.hero-section .hero-article h1 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.hero-section .hero-article strong {
+  font-weight: 700;
+}
+
+.hero-section .hero-article p {
+  color: #71706F;
+  padding: 1rem 0;
+  line-height: 1.5;
+}
+
+.hero-section .hero-article .hero-btn {
+  margin: 1rem 0;
+  padding: 0.8rem 1rem;
+  border: 5px solid #161616;
+  border-radius: 2rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+.hero-section .hero-btn {
+  border: 2px solid #333333;
+  background-color: transparent;
+}
+
+.my-skills-section .container {
+      grid-template-areas: "my-skills-article my-skills-article my-skills-figure my-skills-progress";
+  grid-auto-rows: 35vh;
+}
+
+.my-skills-section .my-skills-article {
+  padding: 2rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: my-skills-article;
+}
+
+.my-skills-section .my-skills-article h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.my-skills-section .my-skills-article p {
+  color: #71706F;
+  padding: 0.5rem 0;
+  line-height: 1.4;
+}
+
+.my-skills-section .my-skills-article .orange {
+  color: #E7724C;
+  padding: 1rem 0;
+}
+
+.my-skills-section .my-skills-figure {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: my-skills-figure;
+  background-image: url("../media/about-img.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 75vh;
+}
+
+.my-skills-section .my-skills-progress {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: my-skills-progress;
+  padding: 2rem;
+  background-color: #E3AE57;
+  /* For Chrome or Safari */
+  /* For Firefox */
+  /* For IE10 */
+}
+
+.my-skills-section .my-skills-progress h2 {
+  font-size: 2rem;
+}
+
+.my-skills-section .my-skills-progress p {
+  font-size: 1.2rem;
+  padding: 1rem 0;
+}
+
+.my-skills-section .my-skills-progress h2, .my-skills-section .my-skills-progress p {
+  color: white;
+}
+
+.my-skills-section .my-skills-progress .combo {
+  padding: 0.5rem 0;
+}
+
+.my-skills-section .my-skills-progress progress {
+  height: 0.2rem;
+  width: 100%;
+}
+
+.my-skills-section .my-skills-progress progress::-webkit-progress-bar {
+  background-color: #eeeeee;
+}
+
+.my-skills-section .my-skills-progress progress::-webkit-progress-value {
+  background-color: #000000 !important;
+}
+
+.my-skills-section .my-skills-progress progress {
+  background-color: #eee;
+}
+
+.my-skills-section .my-skills-progress progress::-moz-progress-bar {
+  background-color: #000000 !important;
+}
+
+.my-skills-section .my-skills-progress progress {
+  background-color: #eee;
+}
+
+.my-skills-section .my-skills-progress progress {
+  background-color: #000000;
+}
+
+.my-skills-section .my-skills-progress span {
+  padding-left: 12rem;
+  color: white;
+}
+
+.blocks-section .container {
+      grid-template-areas: "block-article-1 block-article-2 block-article-3 block-article-4";
+  grid-auto-rows: 30vh;
+}
+
+.blocks-section article {
+  text-align: center;
+  padding: 3rem 0;
+  color: white;
+}
+
+.blocks-section article i {
+  font-size: 1.5rem;
+}
+
+.blocks-section article h2 {
+  font-size: 1.4rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.blocks-section article p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.blocks-section article:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: block-article-1;
+  background-color: #E3AE57;
+}
+
+.blocks-section article:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: block-article-2;
+  background-color: #E7724C;
+}
+
+.blocks-section article:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: block-article-3;
+  background-color: #161616;
+}
+
+.blocks-section article:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: block-article-4;
+  color: black;
+}
+
+.experience-section .container {
+      grid-template-areas: "experience-fig-1 experience-fig-1 experience-article-1 experience-article-1";
+}
+
+.experience-section figure {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: experience-fig-1;
+  background-image: url("../media/experience-img.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 35vh;
+}
+
+.experience-section article {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: experience-article-1;
+  background-color: #E7724C;
+  padding: 2rem;
+  color: white;
+}
+
+.experience-section article i {
+  margin-right: 1rem;
+}
+
+.experience-section article .experience-heading {
+  font-size: 2rem;
+}
+
+.experience-section article h2 {
+  font-size: 1.2rem;
+}
+
+.experience-section article h3 {
+  padding: 1rem 0;
+}
+
+.experience-section article p {
+  padding: 0.5rem 0;
+}
+
+.experience-section article div {
+  padding-bottom: 2rem;
+}
+
+.experience-section article b {
+  color: #663333;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.education-section .container {
+      grid-template-areas: "education-article-1 education-article-1 education-fig-1 education-fig-1";
+}
+
+.education-section figure {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: education-fig-1;
+  background-image: url("../media/education-img.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 35vh;
+}
+
+.education-section article {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: education-article-1;
+  background-color: #E3AE57;
+  padding: 2rem;
+  color: white;
+}
+
+.education-section article i {
+  margin-right: 1rem;
+}
+
+.education-section article .education-heading {
+  font-size: 2rem;
+}
+
+.education-section article h2 {
+  font-size: 1.2rem;
+}
+
+.education-section article h3 {
+  padding: 1rem 0;
+}
+
+.education-section article p {
+  padding: 0.5rem 0;
+}
+
+.education-section article div {
+  padding-bottom: 2rem;
+}
+
+.education-section article b {
+  color: #663333;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.form-section .container {
+      grid-template-areas: "form-article-1 form-article-1 form-fig-1 address-article-1";
+}
+
+.form-section figure {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: form-fig-1;
+  background-image: url("../media/contact-img.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 80vh;
+}
+
+.form-section article {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: form-article-1;
+  background-color: #E7724C;
+  padding: 3rem;
+}
+
+.form-section .address-article {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: address-article-1;
+  background-color: #161616;
+}
+
+.form-section h2 {
+  font-size: 2rem;
+  color: white;
+  padding-bottom: 0.5rem;
+}
+
+.form-section p {
+  color: white;
+  padding: 2rem 0;
+}
+
+.form-section .form-article form input {
+  width: 100%;
+  height: 2rem;
+  border: 0;
+  margin: 1rem 0;
+  border-bottom: 2px solid #E3AE57;
+  background-color: transparent;
+}
+
+.form-section .form-article form input::-webkit-input-placeholder {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.form-section .form-article form input:-ms-input-placeholder {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.form-section .form-article form input::-ms-input-placeholder {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.form-section .form-article form input::placeholder {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.form-section .form-article form input:focus {
+  border: none;
+}
+
+.form-section .form-article form textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 3px solid #E3AE57;
+  background-color: transparent;
+  color: white;
+  height: 6rem;
+  margin: 2rem 0;
+  font-size: 1.2rem;
+}
+
+.form-section .form-article form button {
+  padding: 0.8rem 10rem;
+  border-radius: 5rem;
+  color: #71706F;
+  border: 0;
+  margin: 2rem 0;
+}
+
+.form-section .address-article address i {
+  color: white;
+  margin-right: 0.5rem;
+}
+
+.form-section .address-article address div a {
+  color: #A87D2B;
+  text-decoration: none;
+}
+
+.form-section .address-article address div {
+  padding: 0.5rem 0;
+}
+
+.form-section .address-article .active-cement {
+  color: #71706F !important;
+}
+
+.map-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: center;
+  padding: 2rem 0;
+  background-color: #E7724C;
+}
+
+.footer-section {
+  padding: 5rem 0;
+}
+
+.footer-section .container {
+      grid-template-areas: "footer-article-section footer-article-section footer-article-section footer-article-section";
+}
+
+.footer-section article {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: footer-article-section;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-section article h2 {
+  color: gray;
+}
+
+.footer-section .nav ul {
+  margin: 0 auto;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-top: 1rem;
+}
+
+.footer-section .nav i {
+  color: gray;
+}
+/*# sourceMappingURL=style.css.map */
