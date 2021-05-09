@@ -1,0 +1,189 @@
+body{
+    background-color: #3A4A4F;
+    p{
+        padding: {
+            top:2rem;
+            bottom:2rem;
+        }
+    }
+}
+html{
+    font-size: 16px;
+}
+.container{
+    margin:0 auto;
+    max-width:1460px;
+    width:100%;
+    display: grid;
+    // border:6px solid black;
+    gap:3rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "navbar navbar navbar"
+                        "article1 main article3"
+                        "article4 main article5"
+                        "article4 main article6";
+    place-content: start center;               
+}
+h1{
+    text-align: center;
+    color:white;
+    font-size:3rem;
+    padding:1rem 0;
+}
+h2{
+    font-size:1.5rem;
+}
+.article,.nav{
+    
+    padding:0.5rem;
+    background:$white-color;
+}
+.article{
+    a{
+        color:$red-color;
+        text-decoration: none;
+    }
+}
+.nav-bar{
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    place-items: center;
+}
+.nav-bar li{
+    list-style: none;
+}
+.nav-bar li a{
+    font-size: 1.4rem;
+    font-weight:700;
+    color:$sky-blue-color;
+}
+.nav{
+    grid-area:navbar;
+}
+.article1{
+    grid-area:article1;
+}
+.nav,.article{
+    border-top:3px solid $sky-blue-color;
+}
+.main{
+    grid-area:main;
+    figure{
+        width:25rem;
+        margin:0 auto;
+        img{
+            border-radius:50%;
+            width: 100%;
+        }
+        padding: {
+            top:3rem;
+        }
+    }
+}
+.article3{
+    grid-area:article3;
+    position:relative;
+    .intro{
+        padding: 0.5rem;
+    }
+    padding:0;
+    a{
+        color:white;
+    }
+}
+.article4{
+    grid-area:article4;
+    figure{
+        width:15rem;
+        padding:2rem;
+        margin: 0 auto;
+        img{
+            width: 100%;
+        }
+    }  
+}
+.article5{
+    grid-area:article5;
+    .article5-intro{
+        padding:0.5rem;
+    }
+    padding:0;
+    position: relative;
+    
+}
+.article6{
+    grid-area:article6;
+}
+.red-ribbon{
+    background-color: $red-color;
+    padding:0.5rem;
+    color:white;
+}
+.blue-ribbon{
+    background-color: $sky-blue-color;
+    padding:0.5rem;
+    color:white;
+}
+
+@media screen and (max-width: 1200px) {
+    html{
+        font-size: 12px;
+    }
+    .container{
+        width:90%;
+        grid-template-areas: "navbar navbar navbar"
+                            "article1 article3 article3"
+                            "article4 article5 article5"
+                            "article4 article6 article6"
+                            "main . .";
+        place-content: center;    
+    }
+    .main figure{
+        width:30rem;
+        img{
+            width: 100%;
+        }
+    }
+    .article4{
+        grid-area:article4;
+        figure{
+            width:10rem;
+            img{
+                width: 100%;
+            }
+        }   
+    }
+    
+}
+@media screen and (max-width: 640px) {
+    html{
+        font-size: 10px;
+    }
+    .container{
+        
+        grid-template-areas: "navbar navbar navbar"
+                            
+                            "article1 article1 article1"
+                            "article4 article4 article4"
+                            "main main main"
+                            "article3 article3 article3"
+                            "article5 article5 article5"
+                            "article6 article6 article6";
+        place-content: center;    
+    }
+    .main figure{
+        width:20rem;
+        img{
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 360px) {
+    html{
+        font-size: 8px;
+    }
+    main{
+        padding-bottom: 1rem;
+    }
+   
+}
